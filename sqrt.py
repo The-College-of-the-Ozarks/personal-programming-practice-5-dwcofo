@@ -11,7 +11,8 @@ def crackSqrt(num, e):
     
     
 n, epsilon = float(input("What number do you want to find the sqrt of: ")), float(input("How close do you want x to be: "))
-
+while epsilon <= 0:
+    epsilon = float(input("ERROR: How close do you want x to be (Please put a positive value): "))
 x = crackSqrt(n, epsilon)
 
 print("Your number is", n,"and you wanted to be",epsilon,"close.\nMy guess is x which is",x,". When you square it", x**2)
